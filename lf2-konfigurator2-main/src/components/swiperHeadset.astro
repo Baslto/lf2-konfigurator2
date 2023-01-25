@@ -1,0 +1,88 @@
+---
+import Card from "./Card.astro";
+---
+
+<div id="swiperH" class="relative mb-4 hidden">
+  <div class="swiper mySwiperHeadset w-[900px] mx-auto pb-20">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/150.png/"
+          name="Monitor1"
+          productName="LG-Monitor23x"
+          price="250,20€"
+          consumption="200kw/h"
+          distributor="https://www.youtube.com"
+        />
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="swiper-button-prev left-12 xl:left-44"></div>
+  <div class="swiper-button-next right-12 xl:right-44"></div>
+</div>
+
+<script>
+  var swiper = new Swiper(".mySwiperHeadset", {
+    slidesPerView: 3,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>

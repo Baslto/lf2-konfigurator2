@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Category from "../components/Category.astro";
+import SwiperM from "../components/swiperMonitor.astro";
+import SwiperL from "../components/swiperLaptop.astro";
+import SwiperD from "../components/swiperDocking.astro";
+import SwiperH from "../components/swiperHeadset.astro";
+import SwiperMouse from "../components/swiperMouse.astro";
+import SwiperW from "../components/swiperWebcam.astro";
+import SwiperK from "../components/swiperKeyboard.astro";
+---
+
+<Layout title="LF2-Konfigurator">
+  <main class="pt-24 relative text-center">
+    <h1 class="text-5xl uppercase font-semibold">Kategorien</h1>
+    <div class="flex flex-row gap-4 justify-center items-center mt-11 mb-16">
+      <Category 
+        category="Laptops"
+        id="laptop"
+      />
+      <Category 
+        category="Monitore"
+        id="monitors"
+      />
+      <Category 
+        category="Docking Stations"
+        id="docking"
+      />
+      <Category 
+        category="Webcams"
+        id="webcam"
+      />
+      <Category 
+        category="Tastaturen"
+        id="keyboard"
+      />
+      <Category 
+        category="Mäuse"
+        id="mouse"
+      />
+      <Category 
+        category="Headsets"
+        id="headset"
+      />
+    </div>
+    <SwiperM />
+    <SwiperD />
+    <SwiperH />
+    <SwiperK />
+    <SwiperL />
+    <SwiperMouse />
+    <SwiperW />
+    <div
+      id="cart"
+      class="absolute top-6 right-8 border-2 border-gray-300 rounded-full shadow-md hover:shadow-lg cursor-pointer"
+    >
+      <i class="fa-solid fa-gear fa-2x p-4 text-gray-300"></i>
+    </div>
+
+    <div class="bg-gray-200 shadow-inner flex flex-col items-center pb-12">
+      <div class="text-center mt-12">
+        <h1 class="text-5xl uppercase font-semibold">Vergleich</h1>
+      </div>
+      <div class="flex justify-center py-12">
+        <div
+          id="item1"
+          class="border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] h-[510px] bg-gray-100 shadow-md hover:shadow-2xl cursor-pointer mr-36"
+        >
+        </div>
+        <div
+          id="item2"
+          class="border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] bg-gray-100 shadow-md hover:shadow-2xl cursor-pointer"
+        >
+        </div>
+      </div>
+	  <button class="border rounded-lg border-gray-300 bg-[#007bff] hover:bg-[#0055ff] text-white font-bold w-fit px-14 py-3 uppercase">vergleichen</button>
+    </div>
+  </main>
+</Layout>
