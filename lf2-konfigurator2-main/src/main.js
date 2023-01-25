@@ -51,7 +51,7 @@ function compare() {
     let value2_2 = item2Value2.replace(",", ".")
     let value4 = value2_2.replace("kWh", "")
 
-    let result1 = Math.max(value1, value3)
+    let result1 = Math.min(value1, value3)
     let result2 = Math.min(value2, value4)
     console.log(result2)
     if (result1 === parseFloat(value1)) {
