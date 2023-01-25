@@ -12,8 +12,8 @@ import SwiperK from "../components/swiperKeyboard.astro";
 
 <Layout title="LF2-Konfigurator">
   <main class="pt-24 relative text-center">
-    <h1 class="text-5xl uppercase font-semibold">Kategorien</h1>
-    <div class="flex flex-row gap-4 justify-center items-center mt-11 mb-16">
+    <h1 class="text-5xl uppercase font-semibold mb-11">Kategorien</h1>
+    <div id="category-container" class="flex flex-row gap-4 justify-center items-center mb-16">
       <Category 
         category="Laptops"
         id="laptop"
@@ -43,13 +43,15 @@ import SwiperK from "../components/swiperKeyboard.astro";
         id="headset"
       />
     </div>
-    <SwiperM />
-    <SwiperD />
-    <SwiperH />
-    <SwiperK />
-    <SwiperL />
-    <SwiperMouse />
-    <SwiperW />
+    <div id="swiperContainer">
+      <SwiperM />
+      <SwiperD />
+      <SwiperH />
+      <SwiperK />
+      <SwiperL />
+      <SwiperMouse />
+      <SwiperW />
+    </div>
     <div
       id="cart"
       class="absolute top-6 right-8 border-2 border-gray-300 rounded-full shadow-md hover:shadow-lg cursor-pointer"
@@ -63,17 +65,16 @@ import SwiperK from "../components/swiperKeyboard.astro";
       </div>
       <div class="flex justify-center py-12">
         <div
-          id="item1"
-          class="border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] h-[510px] bg-gray-100 shadow-md hover:shadow-2xl cursor-pointer mr-36"
-        >
-        </div>
+          id="itemContainer1"
+          class="border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] min-h-[507px] bg-gray-100 shadow-md hover:shadow-2xl cursor-pointer mr-36"
+        ></div>
         <div
-          id="item2"
+          id="itemContainer2"
           class="border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] bg-gray-100 shadow-md hover:shadow-2xl cursor-pointer"
-        >
-        </div>
+        ></div>
       </div>
-	  <button class="border rounded-lg border-gray-300 bg-[#007bff] hover:bg-[#0055ff] text-white font-bold w-fit px-14 py-3 uppercase">vergleichen</button>
+      <button class="mb-4 text-red-500 font-semibold hover:underline" onclick="empty()">Clear</button>
+	    <button class="border rounded-lg border-gray-300 bg-[#007bff] hover:bg-[#0055ff] text-white font-bold w-fit px-14 py-3 uppercase" onclick="compare()">vergleichen</button>
     </div>
   </main>
 </Layout>

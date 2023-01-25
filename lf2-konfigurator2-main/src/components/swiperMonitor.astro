@@ -8,11 +8,12 @@ import Card from "./Card.astro";
       <div class="swiper-slide">
         <Card
           image="/150.png/"
-          name="Monitor1"
-          productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
-          distributor="https://www.youtube.com"
+          name='Philips 27"'
+          productName="272E2FA/00"
+          value1="196,90"
+          value2="0,022"
+          value3="1.920 x 1.080"
+          distributor="https://www.shorturl.at/buOQ4"
         />
       </div>
       <div class="swiper-slide">
@@ -70,6 +71,7 @@ import Card from "./Card.astro";
   </div>
   <div class="swiper-button-prev left-12 xl:left-44"></div>
   <div class="swiper-button-next right-12 xl:right-44"></div>
+  <i id="arrowBack2" class="fa-solid fa-arrow-left fa-2x absolute text-[#007bff] hover:left-9 top-[540px] left-10 cursor-pointer z-10"></i>
 </div>
 
 <script>
@@ -85,4 +87,17 @@ import Card from "./Card.astro";
       prevEl: ".swiper-button-prev",
     },
   });
+
+  let swiperM = document.getElementById("swiperM")
+  let categoryContainer = document.getElementById("category-container")
+  document.getElementById("arrowBack2").addEventListener("click", function(){
+    swiperM.classList.toggle("hidden")
+    categoryContainer.classList.toggle("hidden")
+  })
+
+  document.getElementById("monitors").addEventListener("click", function() {
+    swiperM.classList.toggle("hidden")
+    categoryContainer.classList.toggle("hidden")
+  })
+
 </script>

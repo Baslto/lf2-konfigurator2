@@ -7,61 +7,67 @@ import Card from "./Card.astro";
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <Card
+          image="/lenovo-v15-g2.jpg/"
+          name='Normal Budget'
+          productName="Lenovo V15 Gen 2 (15” AMD)"
+          value1="559,36"
+          value2="0,0406"
+          value3="1.920 x 1.080"
+          distributor="https://www.shorturl.at/jlsL9"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
+          image="/IdeaPad-5-Gen-7.png/"
+          name="High Budget"
+          productName="IdeaPad 5 Gen 7 (15” AMD)"
+          value1="727,20"
+          value2="0,065"
+          value3="1.920 x 1.080"
+          distributor="https://www.shorturl.at/kPZ67"
+        />
+      </div>
+      <div class="swiper-slide">
+        <Card
           image="/150.png/"
-          name="Monitor1"
+          name="Laptop3"
           productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
+          value1="250,20€"
+          value2="200kw/h"
+          value3="1920x1270"
           distributor="https://www.youtube.com"
         />
       </div>
       <div class="swiper-slide">
         <Card
           image="/150.png/"
-          name="Monitor1"
+          name="Laptop4"
           productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
+          value1="250,20€"
+          value2="200kw/h"
+          value3="1920x1270"
           distributor="https://www.youtube.com"
         />
       </div>
       <div class="swiper-slide">
         <Card
           image="/150.png/"
-          name="Monitor1"
+          name="Laptop5"
           productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
+          value1="250,20€"
+          value2="200kw/h"
+          value3="1920x1270"
           distributor="https://www.youtube.com"
         />
       </div>
       <div class="swiper-slide">
         <Card
           image="/150.png/"
-          name="Monitor1"
+          name="Laptop6"
           productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
-          distributor="https://www.youtube.com"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Card
-          image="/150.png/"
-          name="Monitor1"
-          productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
-          distributor="https://www.youtube.com"
-        />
-      </div>
-      <div class="swiper-slide">
-        <Card
-          image="/150.png/"
-          name="Monitor1"
-          productName="LG-Monitor23x"
-          price="250,20€"
-          consumption="200kw/h"
+          value1="250,20€"
+          value2="200kw/h"
+          value3="1920x1270"
           distributor="https://www.youtube.com"
         />
       </div>
@@ -70,6 +76,7 @@ import Card from "./Card.astro";
   </div>
   <div class="swiper-button-prev left-12 xl:left-44"></div>
   <div class="swiper-button-next right-12 xl:right-44"></div>
+  <i id="arrowBack1" class="fa-solid fa-arrow-left fa-2x absolute text-[#007bff] hover:left-9 top-[540px] left-10 cursor-pointer z-10"></i>
 </div>
 
 <script>
@@ -85,4 +92,21 @@ import Card from "./Card.astro";
       prevEl: ".swiper-button-prev",
     },
   });
+
+  let swiperL = document.getElementById("swiperL")
+  let categoryContainer = document.getElementById("category-container")
+  document.getElementById("arrowBack1").addEventListener("click", function(){
+    swiperL.classList.toggle("hidden")
+    categoryContainer.classList.toggle("hidden")
+    itemContainer1.replaceChildren()
+    itemContainer2.replaceChildren()
+    itemContainer1.classList.add('border-2', 'border-gray-300', 'rounded-lg', 'min-w-[240px]', 'max-w-[275px]', 'min-h-[507px]', 'bg-gray-100', 'shadow-md', 'hover:shadow-2xl', 'cursor-pointer',  'mr-36')
+    itemContainer2.classList.add('border-2', 'border-gray-300', 'rounded-lg', 'min-w-[240px]', 'max-w-[275px]', 'min-h-[507px]', 'bg-gray-100', 'shadow-md', 'hover:shadow-2xl', 'cursor-pointer')
+  })
+
+  document.getElementById("laptop").addEventListener("click", function() {
+    swiperL.classList.toggle("hidden")
+    categoryContainer.classList.toggle("hidden")
+  })
+
 </script>

@@ -1,15 +1,16 @@
 ---
-const { image, name, productName, price, consumption, distributor } = Astro.props;
+const { image, name, productName, value1, value2, value3, value4, distributor } = Astro.props;
 ---
 <div class="flex justify-center">
-	<div class="card flex flex-col items-center text-center relative divide-y-2 divide-gray-300 border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] shadow-md hover:shadow-2xl cursor-pointer">
+	<div onclick="moveElement(this)" class="card flex flex-col items-center text-center relative divide-y-2 divide-gray-300 border-2 border-gray-300 rounded-lg min-w-[240px] max-w-[275px] shadow-md hover:shadow-2xl cursor-pointer">
 		<div class="flex py-8">
-			<img src={image} alt="Produktbild" class="inline-block">
+			<img src={image} alt="Produktbild" class="inline-block w-[150px] h-[150px]">
 		</div>
 		<p class="font-semibold w-full py-4">{name}</p>
 		<p class="w-full py-4">{productName}</p>
-		<p class="w-full py-4">{price}</p>
-		<p class="w-full py-4">{consumption}</p>
-		<a class="w-full py-4" href={distributor}>{distributor}</a>
+		<p class="w-full py-4 value1">{value1}€</p>
+		<p class="w-full py-4 value2">{value2} kWh</p>
+		<p class="w-full py-4 value3">{value3}</p>
+		<div class="w-full py-4 text-blue-500 underline"><a href={distributor}>{distributor}</a></div>
 	</div>
 </div>
